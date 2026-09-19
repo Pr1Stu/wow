@@ -1,0 +1,19 @@
+name: chat
+version: 1
+model: wow-chat
+prompt: chat.md
+tools:
+  - get_user_context
+  - get_schedule
+  - get_deadlines
+  - create_task
+  - request_escalation
+session_ttl: 2h
+context:
+  compact_threshold: 32000
+  recent_raw_budget: 12000
+  summary_budget: 4000
+limits:
+  max_steps: 6
+  max_tool_calls: 8
+  max_escalations: 1

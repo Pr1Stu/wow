@@ -1,0 +1,14 @@
+name: summary
+version: 1
+model: wow-summary
+prompt: summary.md
+tools: []
+session_ttl: 15m
+context:
+  compact_threshold: 32000
+  recent_raw_budget: 12000
+  summary_budget: 4000
+limits:
+  max_steps: 2
+  max_tool_calls: 0
+  max_escalations: 0

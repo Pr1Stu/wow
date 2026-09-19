@@ -1,0 +1,17 @@
+name: dashboard
+version: 1
+model: wow-fast
+prompt: dashboard.md
+tools:
+  - get_user_context
+  - get_schedule
+  - get_deadlines
+session_ttl: 15m
+context:
+  compact_threshold: 32000
+  recent_raw_budget: 8000
+  summary_budget: 2000
+limits:
+  max_steps: 3
+  max_tool_calls: 4
+  max_escalations: 0

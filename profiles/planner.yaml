@@ -1,0 +1,19 @@
+name: planner
+version: 1
+model: wow-planner
+prompt: planner.md
+tools:
+  - get_user_context
+  - get_schedule
+  - get_deadlines
+  - create_task
+  - request_escalation
+session_ttl: 6h
+context:
+  compact_threshold: 32000
+  recent_raw_budget: 12000
+  summary_budget: 4000
+limits:
+  max_steps: 8
+  max_tool_calls: 10
+  max_escalations: 1
